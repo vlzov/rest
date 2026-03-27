@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  rest:
+    build: ./
+  
+    container_name: rest-docker
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+
+    restart: unless-stopped
